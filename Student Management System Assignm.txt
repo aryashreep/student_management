@@ -1,0 +1,211 @@
+# Student Management System Assignment
+
+## Objective
+
+Build a mini full-stack application called **Student Management System** using:
+
+* FastAPI for Backend APIs
+* Streamlit for Frontend UI
+
+The application should allow users to manage student records digitally by performing CRUD operations.
+
+---
+
+# Problem Statement
+
+A coaching institute wants to replace manual student record management with a simple digital application.
+
+Your task is to build a Student Management System where users can:
+
+* Add new students
+* View all students
+* Search students using ID
+* Update student details
+* Delete student records
+
+The backend APIs should be developed using FastAPI, and the frontend should be created using Streamlit.
+
+---
+
+# Student Fields
+
+Each student record should contain:
+
+| Field  | Type    |
+| ------ | ------- |
+| id     | Integer |
+| name   | String  |
+| age    | Integer |
+| course | String  |
+| email  | String  |
+
+---
+
+# Backend Requirements (FastAPI)
+
+Create the following APIs:
+
+---
+
+## 1. Add Student
+
+Method: `POST`
+
+Endpoint:
+
+```bash
+/students
+```
+
+---
+
+## 2. Get All Students
+
+Method: `GET`
+
+Endpoint:
+
+```bash
+/students
+```
+
+---
+
+## 3. Get Student By ID
+
+Method: `GET`
+
+Endpoint:
+
+```bash
+/students/{student_id}
+```
+
+---
+
+## 4. Update Student
+
+Method: `PUT`
+
+Endpoint:
+
+```bash
+/students/{student_id}
+```
+
+---
+
+## 5. Delete Student
+
+Method: `DELETE`
+
+Endpoint:
+
+```bash
+/students/{student_id}
+```
+
+---
+
+# Validation Rules
+
+Use Pydantic models for validation.
+
+Validation Requirements:
+
+* age must be greater than 17
+* email should be valid
+* name should not be empty
+
+---
+
+# Frontend Requirements (Streamlit)
+
+Create a Streamlit application with the following sections:
+
+---
+
+## 1. Add Student Page
+
+Inputs:
+
+* ID
+* Name
+* Age
+* Course
+* Email
+
+---
+
+## 2. View Students Page
+
+Display all students in table/dataframe format.
+
+---
+
+## 3. Search Student Page
+
+Search student using student ID.
+
+---
+
+## 4. Update Student Page
+
+Update student details using ID.
+
+---
+
+## 5. Delete Student Page
+
+Delete student record using ID.
+
+
+---
+
+# Bonus Features (Optional)
+
+Students can additionally implement:
+
+### 1. Course Filtering
+
+Example:
+
+Show only students belonging to a selected course such as AI, Data Science, etc.
+
+Example API:
+
+```bash
+/students?course=AI
+```
+
+---
+
+### 2. Student Count Dashboard
+
+Display statistics such as:
+
+* Total Students
+* AI Students Count
+* Data Science Students Count
+* Average Age
+
+---
+
+
+
+# Run Commands
+
+Start Backend:
+
+```bash
+uvicorn main:app --reload
+```
+
+Start Frontend:
+
+```bash
+streamlit run app.py
+```
+
+
+

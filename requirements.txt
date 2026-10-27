@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+streamlit
+requests
+pandas
+pytest
+httpx
+sqlalchemy[asyncio]
+asyncpg
+alembic
+python-dotenv
+faker
